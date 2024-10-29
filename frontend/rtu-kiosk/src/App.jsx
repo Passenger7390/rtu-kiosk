@@ -6,13 +6,17 @@ import {
 } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
-import Gpt from "./pages/Gpt";
+import GPTpage from "./pages/GPTpage";
+import QueuePage from "./pages/QueuePage";
+import MapPage from "./pages/MapPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<HomePage />} />
-      <Route path="/open-ai" element={<Gpt />} />
+      <Route path="/open-ai" element={<GPTpage />} />
+      <Route path="/queue" element={<QueuePage />} />
+      <Route path="/map" element={<MapPage />} />
     </Route>
   )
 );

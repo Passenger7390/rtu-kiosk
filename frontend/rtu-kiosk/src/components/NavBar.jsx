@@ -1,27 +1,30 @@
-import logo from "../assets/images/rtulogo.png";
-import cealogo from "../assets/images/cea-logo.png";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { FaLocationDot } from "react-icons/fa6";
+import { AiOutlineOpenAI } from "react-icons/ai";
+import { FaPeopleLine } from "react-icons/fa6";
+import { FaClipboardList } from "react-icons/fa";
 
 const NavBar = () => {
   return (
-    <>
-      <div className="fixed inset-x-0 top-0 h-60 flex flex-row">
-        <div className="flex items-center justify-center w-80">
-          <img
-            className="w-64 p-10 object-cover inline-block"
-            src={logo}
-            alt="rtu logo"
-          />
-        </div>
-        <div className="flex-1"></div>
-        <div className="flex items-center justify-center w-80">
-          <img
-            className="w-64 p-10 object-cover inline-block"
-            src={cealogo}
-            alt="rtu logo"
-          />
-        </div>
-      </div>
-    </>
+    <nav className="flex justify-center">
+      <NavLink to="/open-ai" className="navbar">
+        <AiOutlineOpenAI className="icon-button" />
+        OpenAI
+      </NavLink>
+      <NavLink to="/queue" className="navbar">
+        <FaPeopleLine className="icon-button" />
+        Queue
+      </NavLink>
+      <NavLink to="/map" className="navbar">
+        <FaLocationDot className="icon-button" />
+        Map
+      </NavLink>
+      <NavLink to="/" className="navbar">
+        <FaClipboardList className="icon-button" />
+        Enrollment
+      </NavLink>
+    </nav>
   );
 };
 

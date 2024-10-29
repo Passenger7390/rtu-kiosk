@@ -1,7 +1,11 @@
 import MainMenu from "../components/MainMenu";
 
 const HomePage = () => {
-  return <MainMenu />;
+  return (
+    <>
+      <MainMenu />
+    </>
+  );
 };
 
 export default HomePage;

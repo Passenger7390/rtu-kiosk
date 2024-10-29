@@ -11,3 +11,27 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+
+.navbar {
+  @apply rounded-3xl text-center m-4 pt-0 pb-0 pr-0 pl-0;
+}
+
+.icon-button {
+  @apply h-32 w-32 rounded-3xl p-4 m-4 border-[5px] border-black bg-white;
+}
+
+.icon-button:active {
+  @apply transform translate-y-2;
+}
+
+.navbar1 {
+  @apply rounded-3xl m-4 pt-0 pb-0 pr-0 pl-0;
+}
+
+.icon-button1 {
+  @apply h-24 w-24 border rounded-3xl p-2 m-4 border-[5px] border-black bg-white;
+}
+
+.icon-button1:active {
+  @apply transform translate-y-2;
+}
