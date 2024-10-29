@@ -1,7 +1,0 @@
-.icon-button {
-  @apply h-24 w-24 border rounded-3xl p-2 m-4 border-[5px] border-black bg-white;
-}
-
-.icon-button:active {
-  @apply transform translateY(2px);
-}
