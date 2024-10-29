@@ -6,12 +6,12 @@ export default {
       fontFamily: {
         lex: ["Lexend Deca", "sans-serif"],
       },
-    },
-    colors: {
-      "bg-color": "#6b9beb",
-      "color-blue": "#1651c4",
-      "color-gold": "#fff761",
-      white: "#FFFFFF",
+      colors: {
+        bgBlue: "#6b9beb",
+        customBlue: "#1651c4",
+        customGold: "#fff761",
+        white: "#FFFFFF",
+      },
     },
   },
   plugins: [],
