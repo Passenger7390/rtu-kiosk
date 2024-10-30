@@ -12,6 +12,11 @@ import { FaClipboardList } from "react-icons/fa";
 const NavBar1 = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const linkClassIcon = "h-24 w-24";
+  const navbar = ({ isActive }) =>
+    isActive
+      ? "text-black bg-customYellow h-24 w-24 m-4 p-4 rounded-3xl hover:bg-customBlue hover:text-white border-[5px] border-black flex items-center"
+      : "text-black bg-white h-24 w-24 m-4 p-4 rounded-3xl hover:bg-customBlue hover:text-white border-[5px] border-black flex items-center";
   return (
     <nav className="fixed inset-x-0 top-0 h-60 flex flex-row">
       <div className="flex items-center justify-center w-80">
@@ -24,20 +29,20 @@ const NavBar1 = () => {
       <div className="flex flex-1 h-40 justify-center p-1">
         {!isHomePage && (
           <>
-            <NavLink to="/" className="navbar1">
-              <IoHome className="icon-button1" />
+            <NavLink to="/" className={navbar}>
+              <IoHome className={linkClassIcon} />
             </NavLink>
-            <NavLink to="/open-ai" className="navbar1">
-              <AiOutlineOpenAI className="icon-button1" />
+            <NavLink to="/open-ai" className={navbar}>
+              <AiOutlineOpenAI className={linkClassIcon} />
             </NavLink>
-            <NavLink to="/queue" className="navbar1">
-              <FaPeopleLine className="icon-button1" />
+            <NavLink to="/queue" className={navbar}>
+              <FaPeopleLine className={linkClassIcon} />
             </NavLink>
-            <NavLink to="/map" className="navbar1">
-              <FaLocationDot className="icon-button1" />
+            <NavLink to="/map" className={navbar}>
+              <FaLocationDot className={linkClassIcon} />
             </NavLink>
-            <NavLink to="/" className="navbar1">
-              <FaClipboardList className="icon-button1" />
+            <NavLink to="/" className={navbar}>
+              <FaClipboardList className={linkClassIcon} />
             </NavLink>
           </>
         )}

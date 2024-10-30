@@ -10,7 +10,7 @@ export default {
         bgBlue: "#6b9beb",
         customBlue: "#1651c4",
         customGold: "#fff761",
-        white: "#FFFFFF",
+        customYellow: "#dec915",
       },
     },
   },
