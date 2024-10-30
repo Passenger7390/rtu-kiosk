@@ -17,6 +17,13 @@ const NavBar1 = () => {
     isActive
       ? "text-black bg-customYellow h-24 w-24 m-4 p-4 rounded-3xl hover:bg-customBlue hover:text-white border-[5px] border-black flex items-center"
       : "text-black bg-white h-24 w-24 m-4 p-4 rounded-3xl hover:bg-customBlue hover:text-white border-[5px] border-black flex items-center";
+  const portal =
+    "text-black bg-white h-24 w-24 m-4 p-4 rounded-3xl hover:bg-customBlue hover:text-white border-[5px] border-black flex items-center";
+
+  function handleExternalLinkClick(url) {
+    window.open(url, "_blank", "noopener,noreferrer");
+    window.location.href = "/";
+  }
   return (
     <nav className="fixed inset-x-0 top-0 h-60 flex flex-row">
       <div className="flex items-center justify-center w-80">
@@ -41,9 +48,19 @@ const NavBar1 = () => {
             <NavLink to="/map" className={navbar}>
               <FaLocationDot className={linkClassIcon} />
             </NavLink>
-            <NavLink to="/" className={navbar}>
+            <a
+              href="#"
+              onClick={() =>
+                handleExternalLinkClick(
+                  "https://rtu.campus-erp.com/Student/Login.php"
+                )
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className={portal}
+            >
               <FaClipboardList className={linkClassIcon} />
-            </NavLink>
+            </a>
           </>
         )}
       </div>

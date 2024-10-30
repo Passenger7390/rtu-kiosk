@@ -23,10 +23,15 @@ const NavBar = () => {
         <FaLocationDot className={linkClassIcon} />
         Map
       </NavLink>
-      <NavLink to="/" className={navbar}>
+      <a
+        href="https://rtu.campus-erp.com/Student/Login.php"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={navbar}
+      >
         <FaClipboardList className={linkClassIcon} />
         Enrollment
-      </NavLink>
+      </a>
     </nav>
   );
 };
