@@ -12,6 +12,20 @@ export default {
         customGold: "#fff761",
         customYellow: "#dec915",
       },
+      keyframes: {
+        type: {
+          "0%": { width: "0ch" },
+          "100%": { width: "40ch" },
+        },
+        blink: {
+          "0%, 50%": { "border-color": "black" },
+          "50%, 100%": { "border-color": "transparent" },
+        },
+      },
+      animation: {
+        type: "type 2s steps(40, end) forwards",
+        blink: "blink 1s steps(2, start) infinite",
+      },
     },
   },
   plugins: [],

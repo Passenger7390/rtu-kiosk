@@ -8,7 +8,7 @@ import { FaClipboardList } from "react-icons/fa";
 const NavBar = () => {
   const linkClassIcon = "h-24 w-24";
   const navbar =
-    "relative inline-flex flex-col items-center text-black text-3xl border-[5px] border-black m-4 mr-16 p-4 h-48 w-48 rounded-3xl bg-white hover:bg-customYellow hover:text-black";
+    "relative inline-flex flex-col items-center text-black text-3xl border-[5px] border-black m-4 mr-16 p-4 h-48 w-48 rounded-3xl bg-white";
   return (
     <nav className="flex justify-center h-56 mt-10">
       <NavLink to="/open-ai" className={navbar}>
@@ -24,7 +24,14 @@ const NavBar = () => {
         Map
       </NavLink>
       <a
-        href="https://rtu.campus-erp.com/Student/Login.php"
+        href="#"
+        onClick={() => {
+          window.open(
+            "https://rtu.campus-erp.com/Student/Login.php",
+            "_blank",
+            "width=1920,height=1080"
+          );
+        }}
         target="_blank"
         rel="noopener noreferrer"
         className={navbar}

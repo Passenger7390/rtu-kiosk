@@ -12,18 +12,14 @@ import { FaClipboardList } from "react-icons/fa";
 const NavBar1 = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-  const linkClassIcon = "h-24 w-24";
+  const linkClassIcon = "h-24 w-24 p-1";
   const navbar = ({ isActive }) =>
     isActive
-      ? "text-black bg-customYellow h-24 w-24 m-4 p-4 rounded-3xl hover:bg-customBlue hover:text-white border-[5px] border-black flex items-center"
-      : "text-black bg-white h-24 w-24 m-4 p-4 rounded-3xl hover:bg-customBlue hover:text-white border-[5px] border-black flex items-center";
+      ? "text-black bg-customYellow h-24 w-24 m-4 p-4 rounded-3xl border-[5px] border-black flex items-center"
+      : "text-black bg-white h-24 w-24 m-4 p-4 rounded-3xl border-[5px] border-black flex items-center";
   const portal =
     "text-black bg-white h-24 w-24 m-4 p-4 rounded-3xl hover:bg-customBlue hover:text-white border-[5px] border-black flex items-center";
 
-  function handleExternalLinkClick(url) {
-    window.open(url, "_blank", "noopener,noreferrer");
-    window.location.href = "/";
-  }
   return (
     <nav className="fixed inset-x-0 top-0 h-60 flex flex-row">
       <div className="flex items-center justify-center w-80">
@@ -50,11 +46,14 @@ const NavBar1 = () => {
             </NavLink>
             <a
               href="#"
-              onClick={() =>
-                handleExternalLinkClick(
-                  "https://rtu.campus-erp.com/Student/Login.php"
-                )
-              }
+              onClick={() => {
+                window.open(
+                  "https://rtu.campus-erp.com/Student/Login.php",
+                  "_blank",
+                  "width=1920,height=1080"
+                );
+                window.location.href = "/";
+              }}
               target="_blank"
               rel="noopener noreferrer"
               className={portal}
