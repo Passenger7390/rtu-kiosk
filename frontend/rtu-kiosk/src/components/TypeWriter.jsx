@@ -1,9 +1,9 @@
 import React from "react";
 
-const TypeWriter = ({ text, font }) => {
+const TypeWriter = ({ text, font, fontSize = "7xl" }) => {
   return (
     <div
-      className={`overflow-hidden whitespace-nowrap animate-type text-5xl ${font}`}
+      className={`overflow-hidden whitespace-nowrap animate-type text-${fontSize} ${font}`}
       style={{ maxWidth: `${text.length}ch` }}
     >
       <span className="animate-type">{text}</span>
