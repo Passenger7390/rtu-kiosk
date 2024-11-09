@@ -5,7 +5,7 @@ const GPTpage = () => {
   return (
     <>
       <div className="flex items-center justify-center font-lex">
-        <div className="flex items-center justify-center w-[790px] h-14">
+        <div className="flex items-center justify-center w-[790px] h-20 border p-0">
           <TypeWriter text="What can I help with?" font="font-lex" />
         </div>
       </div>

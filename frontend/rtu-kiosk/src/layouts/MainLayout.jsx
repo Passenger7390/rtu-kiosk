@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import NavBar1 from "../components/NavBar1";
+import HomepageNav from "../components/HomePageNav.jsx";
 const MainLayout = () => {
   return (
     <>
-      <NavBar1 />
+      <HomepageNav />
       <Outlet />
     </>
   );

@@ -9,7 +9,7 @@ import { AiOutlineOpenAI } from "react-icons/ai";
 import { FaPeopleLine } from "react-icons/fa6";
 import { FaClipboardList } from "react-icons/fa";
 
-const NavBar1 = () => {
+const HomePageNav = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const linkClassIcon = "h-24 w-24 p-1";
@@ -74,4 +74,4 @@ const NavBar1 = () => {
   );
 };
 
-export default NavBar1;
+export default HomePageNav;
