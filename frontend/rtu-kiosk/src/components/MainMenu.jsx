@@ -1,4 +1,4 @@
-import NavBar from "./NavBar.jsx";
+import HomePageNav from "./HomePageNav.jsx";
 const MainMenu = () => {
   return (
     <>
@@ -8,7 +8,7 @@ const MainMenu = () => {
           WELCOME <span className="text-customBlue">RTU</span>
           <span className="text-customGold">ISTA</span>
         </p>
-        <NavBar />
+        <HomePageNav />
       </div>
     </>
   );
