@@ -4,7 +4,7 @@ const MainMenu = () => {
     <>
       <div className="font-lex">
         {/* Welcome message */}
-        <p className="text-8xl align-middle text-center">
+        <p className="text-8xl align-middle text-center select-none">
           WELCOME <span className="text-customBlue">RTU</span>
           <span className="text-customGold">ISTA</span>
         </p>

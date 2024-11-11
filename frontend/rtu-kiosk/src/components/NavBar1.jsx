@@ -16,9 +16,10 @@ const NavBar1 = () => {
     <nav className="fixed inset-x-0 top-0 h-60 flex flex-row">
       <div className="flex items-center justify-center w-80">
         <img
-          className="w-64 p-10 object-cover inline-block"
+          className="w-64 p-10 object-cover inline-block select-none"
           src={logo}
           alt="rtu logo"
+          draggable="false"
         />
       </div>
       <div className="flex flex-1 h-40 justify-center p-1">
@@ -44,9 +45,10 @@ const NavBar1 = () => {
       </div>
       <div className="flex items-center justify-center w-80">
         <img
-          className="w-64 p-10 object-cover inline-block"
+          className="w-64 p-10 object-cover inline-block select-none"
           src={cealogo}
           alt="cea logo"
+          draggable="false"
         />
       </div>
     </nav>
