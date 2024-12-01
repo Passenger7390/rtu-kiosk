@@ -1,7 +1,6 @@
 import React from "react";
-
 const MapPage = () => {
-  return <div>MapPage</div>;
+  return <div>Helo</div>;
 };
 
 export default MapPage;
