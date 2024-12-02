@@ -18,6 +18,10 @@ const Chat = ({ onConversationStart }) => {
       sender: "user"
     };
 
+    if (onConversationStart) {
+      onConversationStart();
+    }
+
     const newMessages = [...messages, newMessage];
     setMessages(newMessages);
 
@@ -51,15 +55,15 @@ const Chat = ({ onConversationStart }) => {
       <div className="overflow-y-auto mb-2 flex-1 w-full justify-center px-56 py-4 scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-blue-500">
         {messages.map((msg, index) => (
           <div
-            key={index}
-            className={`flex p-2 mb-2 rounded-3xl ${
-              msg.sender === "user"
-                ? "bg-customGold justify-end self-end max-w-[75%] ml-auto px-4 py-4 min-w-[1%] w-[fit-content]"
-                : "bg-blue-500 justify-start self-start max-w-[75%] mr-auto px-4 py-4 min-w-[1%] w-[fit-content]"
-            }`}
-          >
-            {msg.message}
-          </div>
+          key={index}
+          className={`flex p-2 mb-2 rounded-3xl ${
+            msg.sender === "user"
+              ? "bg-customGold justify-end self-end max-w-[75%] ml-auto px-4 py-4 min-w-[1%] w-[fit-content]"
+              : "bg-blue-500 justify-start self-start max-w-[75%] mr-auto px-4 py-4 min-w-[1%] w-[fit-content]"
+          }`}
+        >
+          {msg.message}
+        </div>
         ))}
         <div ref={messagesEndRef} />
       </div>
