@@ -3,27 +3,28 @@ import { NavLink } from "react-router-dom";
 import { FaLocationDot } from "react-icons/fa6";
 import { AiOutlineOpenAI } from "react-icons/ai";
 import { FaPeopleLine } from "react-icons/fa6";
-import { FaClipboardList } from "react-icons/fa";
+import { GrServices } from "react-icons/gr";
+
 
 const HomePageNav = () => {
-  const linkClassIcon = "p-1 object-cover w-full h-full";
+  const linkClassIcon = "p-1 object-cover w-full h-full user-select-none";
   const navbar =
-    "relative inline-flex flex-col items-center text-black text-3xl border-[5px] border-black m-4 mr-5 p-4 h-60 w-60 rounded-3xl bg-white";
+    "user-select-none relative inline-flex flex-col items-center text-black text-3xl border-[5px] border-black m-4 mr-5 p-4 h-60 w-60 rounded-3xl bg-white";
   return (
     <nav className="flex justify-center h-56 mt-10">
-      <NavLink to="/open-ai" className={navbar}>
+      <NavLink to="/open-ai" className={navbar} draggable="false">
         <AiOutlineOpenAI className={linkClassIcon} />
-        OpenAI
+        RAY
       </NavLink>
-      <NavLink to="/queue" className={navbar}>
-        <FaPeopleLine className={linkClassIcon} />
-        Queue
+      <NavLink to="/services" className={navbar} draggable="false">
+        <GrServices className={linkClassIcon} />
+        Services
       </NavLink>
-      <NavLink to="/map" className={navbar}>
+      <NavLink to="/map" className={navbar} draggable="false">
         <FaLocationDot className={linkClassIcon} />
         Map
       </NavLink>
-      <a
+      {/* <a
         href="#"
         onClick={() => {
           window.open(
@@ -38,7 +39,7 @@ const HomePageNav = () => {
       >
         <FaClipboardList className={linkClassIcon} />
         Enrollment
-      </a>
+      </a> */}
     </nav>
   );
 };

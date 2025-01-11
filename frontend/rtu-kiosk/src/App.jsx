@@ -7,16 +7,19 @@ import {
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import GPTpage from "./pages/GPTpage";
-import QueuePage from "./pages/QueuePage";
 import MapPage from "./pages/MapPage";
+import ServicesPage from "./pages/ServicesPage"
+import AppointmentPage from "./pages/AppointmentPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<HomePage />} />
       <Route path="/open-ai" element={<GPTpage />} />
-      <Route path="/queue" element={<QueuePage />} />
+      <Route path="/services" element={<ServicesPage />} />
       <Route path="/map" element={<MapPage />} />
+      <Route path="/appointment" element={<AppointmentPage />} />
+
     </Route>
   )
 );

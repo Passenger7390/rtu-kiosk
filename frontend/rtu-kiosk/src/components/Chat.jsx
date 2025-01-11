@@ -6,7 +6,7 @@ const Chat = ({ onConversationStart }) => {
   const [isTyping, setIsTyping] = useState(false);
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I'm ChatGPT!",
+      message: "Hello1 I'm RAY, RTU Assistant for You.",
       sender: "ChatGPT",
       direction: 'ingoing'
     }
@@ -75,7 +75,7 @@ const Chat = ({ onConversationStart }) => {
         <SearchBar
           onSend={handleSend}
           width="w-full"
-          placeholder="Message ChatGPT"
+          placeholder="Message RAY"
         />
       </div>
     </div>
