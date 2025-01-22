@@ -53,3 +53,7 @@ env/
 ENV/
 venv/
 .env/
+.venv/
+rasa-env/
+rasa/
+.python-version
