@@ -9,7 +9,6 @@ import { AiOutlineOpenAI } from "react-icons/ai";
 import { FaPeopleLine } from "react-icons/fa6";
 import { GrServices } from "react-icons/gr";
 
-
 const NavBar = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
@@ -21,8 +20,16 @@ const NavBar = () => {
 
   return (
     <nav className="fixed inset-x-0 top-0 h-48 flex flex-row">
-      <div className="flex items-center justify-center min-w-[80px] max-w-[192px] min-h-[80px] max-h-[192px] ml-5 user-select-none" draggable="false">
-        <img className="p-3 object-cover w-full user-select-none" draggable="false" src={logo} alt="rtu logo" />
+      <div
+        className="flex items-center justify-center min-w-[80px] max-w-[192px] min-h-[80px] max-h-[192px] ml-5 user-select-none"
+        draggable="false"
+      >
+        <img
+          className="p-3 object-cover w-full user-select-none"
+          draggable="false"
+          src={logo}
+          alt="rtu logo"
+        />
       </div>
       <div className="flex flex-1 h-48 justify-center p-1 w-0">
         {!isHomePage && (
@@ -30,7 +37,7 @@ const NavBar = () => {
             <NavLink to="/" className={navbar} draggable="false">
               <IoHome className={linkClassIcon} />
             </NavLink>
-            <NavLink to="/open-ai" className={navbar} draggable="false">
+            <NavLink to="/ray" className={navbar} draggable="false">
               <AiOutlineOpenAI className={linkClassIcon} />
             </NavLink>
             <NavLink to="/services" className={navbar} draggable="false">
@@ -59,7 +66,12 @@ const NavBar = () => {
         )}
       </div>
       <div className="flex items-center justify-center min-w-[80px] max-w-[192px] min-h-[80px] max-h-[192px] mr-5">
-        <img className="p-3 object-cover w-full user-select-none" draggable="false" src={cealogo} alt="cea logo" />
+        <img
+          className="p-3 object-cover w-full user-select-none"
+          draggable="false"
+          src={cealogo}
+          alt="cea logo"
+        />
       </div>
     </nav>
   );
