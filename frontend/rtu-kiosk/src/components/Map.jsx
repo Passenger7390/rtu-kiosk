@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import geojsonData from "../../../../backend/geojson.geojson";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_API;
 
@@ -33,21 +32,22 @@ const Map = () => {
     mapRef.current.on("load", () => {
       mapRef.current.addSource("geojson-data", {
         type: "geojson",
-        data: geojsonData,
+        data: "http://localhost:8000/geojson",
+      });
+      mapRef.current.addLayer({
+        id: "room-extrusion",
+        type: "fill-extrusion",
+        source: "geojson-data",
+        paint: {
+          "fill-extrusion-color": ["get", "color"],
+          "fill-extrusion-height": ["get", "height"],
+          "fill-extrusion-base": ["get", "base_height"],
+          "fill-extrusion-opacity": 0.5,
+        },
       });
     });
 
-    mapRef.current.addLayer({
-      id: "room-extrusion",
-      type: "fill-extrusion",
-      source: "geojson-data",
-      paint: {
-        "fill-extrusion-color": ["get", "color"],
-        "fill-extrusion-height": ["get", "height"],
-        "fill-extrusion-base": ["get", "base_height"],
-        "fill-extrusion-opacity": 0.5,
-      },
-    });
+    
 
     mapRef.current.on("move", () => {
       const mapCenter = mapRef.current.getCenter();
