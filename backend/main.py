@@ -21,7 +21,7 @@ def read_root():
 
 @app.get("/geojson")
 def get_geojson():
-    geojson_path = os.path.join(os.path.dirname(__file__), "export.geojson")
+    geojson_path = os.path.join(os.path.dirname(__file__), "map.geojson")
     with open(geojson_path, "r") as file:
         geojson_data = json.load(file)
     return JSONResponse(content=geojson_data)
